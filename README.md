@@ -1,6 +1,7 @@
 # SNI
 
 SNI 代理探测，可加速某些被恶意干扰丢包的网站的访问，如 github。
+
 （由于存在 SNI Reset，并不能用来翻墙，不要尝试）
 
 下载：<https://github.com/wzv5/sni/releases/latest>
