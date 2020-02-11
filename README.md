@@ -5,6 +5,8 @@ SNI 代理探测，可加速某些被恶意干扰丢包的网站的访问，如 
 
 下载：<https://github.com/wzv5/sni/releases/latest>
 
+代码兼容 .NET Core，如需跨平台使用请自行编译。
+
 ``` text
 $ sni
 参数：
