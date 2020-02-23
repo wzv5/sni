@@ -209,7 +209,7 @@ namespace sni
 
         static Config ParseArgs(string[] args)
         {
-            if (args.Length == 0)
+            if (args.Length == 0 && !Console.IsInputRedirected)
             {
                 Help();
                 return null;
@@ -286,6 +286,10 @@ namespace sni
                         conf.ip.Add(IntToIP(start + i));
                     }
                 }
+            }
+            if (string.IsNullOrEmpty(input) && Console.IsInputRedirected)
+            {
+                input = "stdin";
             }
             if (input != "")
             {
