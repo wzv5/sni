@@ -146,7 +146,7 @@ namespace sni
             Console.WriteLine("{0,-34}{1}", "", "192.168.1.0-192.168.1.255");
             Console.WriteLine("{0,-34}{1}", "", "192.168.1.0/24");
             Console.WriteLine("{0,-34}{1}", "", "192.168.1.0|256");
-            Console.WriteLine("{0,-30}{1}", "-o, --out <filename>", "默认 sni_yyyyMMdd_HHmmss.txt");
+            Console.WriteLine("{0,-30}{1}", "-o, --out <filename or null>", "默认 sni_yyyyMMdd_HHmmss.txt");
             Console.WriteLine("{0,-30}{1}", "-h, --help", "显示此帮助信息");
             Console.WriteLine();
             Console.WriteLine("示例：");
@@ -312,6 +312,10 @@ namespace sni
             {
                 Console.Error.WriteLine("任务列表为空");
                 return null;
+            }
+            if (conf.result_filename == "null" || string.IsNullOrWhiteSpace(conf.result_filename))
+            {
+                conf.result_filename = Path.Combine(Path.GetTempPath(), "sni_temp.txt");
             }
             return conf;
         }

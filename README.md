@@ -24,7 +24,7 @@ $ sni
                                   192.168.1.0-192.168.1.255
                                   192.168.1.0/24
                                   192.168.1.0|256
--o, --out <filename>          默认 sni_yyyyMMdd_HHmmss.txt
+-o, --out <filename or null>  默认 sni_yyyyMMdd_HHmmss.txt
 -h, --help                    显示此帮助信息
 
 示例：
