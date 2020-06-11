@@ -84,6 +84,7 @@ namespace sni
             
             var options = new ParallelOptions();
             options.MaxDegreeOfParallelism = conf.parallels;
+            ThreadPool.SetMinThreads(conf.parallels, conf.parallels);
             Parallel.ForEach(conf.ip, options, (ip) => {
                 Interlocked.Increment(ref cur);
                 Debug.WriteLine(ip.ToString());
