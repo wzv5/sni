@@ -38,7 +38,7 @@ namespace sni
             {
                 try
                 {
-                    ssl.AuthenticateAsClient(host);
+                    ssl.AuthenticateAsClient(host, null, System.Security.Authentication.SslProtocols.Tls12, false);
                     return true;
                 }
                 catch (System.Security.Authentication.AuthenticationException)
